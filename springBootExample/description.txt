@@ -1,0 +1,16 @@
+Spring Boot takes care of application infra, while you can focus on coding the actual business flesh. It makes reasonable assumptions of the dependencies and adds them accordingly. It lets you customize the dependencies according to your requirement.
+
+build.gradle
+=============
+
+	The buildscript() is used to add any external libraries to script's classpath(for the build.gradle file itself)
+	
+SampleController.java:
+======================
+
+	@RestController marks the class as controller and adds @Controller and @ResponseBody annotations.
+	
+SampleApplication.java
+=======================
+
+	@SpringBootController is equivalent to @Configuration, @ComponentScan and @EnableAutoConfiguration with their default attributes
