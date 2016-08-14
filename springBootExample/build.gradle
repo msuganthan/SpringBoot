@@ -1,0 +1,33 @@
+//buildscript method is used to add any external libraries to script's classpath, by
+//passing in a closure that declare the build script classpath using classpath configuration
+
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.2.RELEASE")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+jar {
+	baseName = 'sample'
+	version =  '0.1.0'
+}
+
+repositories {
+	mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web")
+
+}
